@@ -2,6 +2,37 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('inga.jpg'); /* Replace with your background image */
+    background-size: cover;  /* Ensures the image covers the full screen */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Add media query adjustments */
+@media (max-width: 768px) {
+    body, html {
+        background-size: contain;  /* Ensures the image is fully visible on smaller screens */
+        background-position: center;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    body, html {
+        background-size: 100vw auto;  /* Wide screens: adjust to width */
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    body, html {
+        background-size: auto 100vh;  /* Tall screens: adjust to height */
+    }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     overflow: hidden;
     background-image: url('inga.jpg'); /* Replace with your background image */
     background-size: cover;
